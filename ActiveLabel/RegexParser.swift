@@ -47,7 +47,8 @@ final class RegexParser: RegexParserInterface {
         case .date:
             regularExpression = buildDataDetector(forTypes: [.date])
         case .url:
-            regularExpression = buildRegularExpression(forPattern: urlPattern)
+            regularExpression = buildDataDetector(forTypes: [.link])
+//             regularExpression = buildRegularExpression(forPattern: urlPattern)
         case .email:
             regularExpression = buildRegularExpression(forPattern: emailPattern)
         case .mention:
